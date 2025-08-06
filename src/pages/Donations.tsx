@@ -159,96 +159,72 @@ const Donations = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {donationCauses.map((cause, index) => {
               const progressPercentage = (cause.raisedAmount / cause.goalAmount) * 100;
               
               return (
                 <div
                   key={cause.id}
-                  className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-warm transition-all duration-300 animate-fade-in"
+                  className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-warm transition-all duration-300 animate-fade-in group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative">
                     <img
                       src={cause.image}
                       alt={cause.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className="bg-primary text-primary-foreground p-2 rounded-full">
-                        <cause.icon className="h-5 w-5" />
+                    <div className="absolute top-3 left-3">
+                      <div className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg">
+                        <cause.icon className="h-4 w-4" />
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium text-foreground">
+                    <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-foreground">
                       {cause.urgentDonors} donors
                     </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
                       {cause.title}
                     </h3>
                     
-                    <p className="text-muted-foreground mb-6">
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                       {cause.description}
                     </p>
 
-                    {/* Progress */}
-                    <div className="mb-6">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-foreground">
-                          ₹{cause.raisedAmount.toLocaleString()} raised
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          Goal: ₹{cause.goalAmount.toLocaleString()}
-                        </span>
-                      </div>
+                    {/* Compact Progress */}
+                    <div className="mb-4">
                       <EnhancedProgress 
                         value={progressPercentage} 
                         variant="gradient"
-                        size="lg"
+                        size="md"
                         goalAmount={cause.goalAmount}
                         raisedAmount={cause.raisedAmount}
                       />
-                      <p className="text-xs text-muted-foreground mt-1">
-                        {Math.round(progressPercentage)}% completed
-                      </p>
                     </div>
 
-                    {/* Impact Statement */}
-                    <div className="bg-accent/50 rounded-lg p-4 mb-6">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <Target className="h-4 w-4 text-primary" />
-                        <span className="font-medium text-foreground">Impact</span>
+                    {/* Compact Impact */}
+                    <div className="bg-primary/5 border border-primary/10 rounded-lg p-3 mb-4">
+                      <div className="flex items-center space-x-2 mb-1">
+                        <Target className="h-3 w-3 text-primary" />
+                        <span className="text-xs font-medium text-primary">Impact</span>
                       </div>
-                      <p className="text-sm text-muted-foreground">{cause.impact}</p>
-                    </div>
-
-                    {/* Benefits */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-foreground mb-3">Your donation provides:</h4>
-                      <div className="space-y-2">
-                        {cause.benefits.map((benefit, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <CheckCircle className="h-4 w-4 text-success" />
-                            <span className="text-sm text-muted-foreground">{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
+                      <p className="text-xs text-muted-foreground">{cause.impact}</p>
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex gap-2">
                       <Link to={`/donation-details/${cause.id}`} className="flex-1">
-                        <Button variant="donate" size="lg" className="w-full">
+                        <Button variant="donate" size="sm" className="w-full text-sm">
                           Donate Now
                         </Button>
                       </Link>
                       <Link to={`/donation-details/${cause.id}`}>
-                        <Button variant="warm" size="lg" className="min-w-[120px]">
-                          Learn More
-                          <ArrowRight className="h-4 w-4 ml-2" />
+                        <Button variant="warm" size="sm" className="px-3">
+                          <ArrowRight className="h-3 w-3" />
                         </Button>
                       </Link>
                     </div>

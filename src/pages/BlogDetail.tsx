@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import PageBanner from '@/components/layout/PageBanner';
-import { Calendar, User, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Bookmark, Heart, MessageCircle, Eye } from 'lucide-react';
+import { Calendar, User, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Bookmark, Heart, MessageCircle, Eye, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
