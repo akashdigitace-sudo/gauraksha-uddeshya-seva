@@ -4,7 +4,7 @@ import Layout from '@/components/layout/Layout';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Heart, Truck, Home, Wheat, Target, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { EnhancedProgress } from '@/components/ui/enhanced-progress';
 import cowAmbulanceImage from '@/assets/cow-ambulance.jpg';
 import gaushalaImage from '@/assets/gaushala.jpg';
 import rescuedCowImage from '@/assets/rescued-cow.jpg';
@@ -204,7 +204,13 @@ const Donations = () => {
                           Goal: ₹{cause.goalAmount.toLocaleString()}
                         </span>
                       </div>
-                      <Progress value={progressPercentage} className="h-3" />
+                      <EnhancedProgress 
+                        value={progressPercentage} 
+                        variant="gradient"
+                        size="lg"
+                        goalAmount={cause.goalAmount}
+                        raisedAmount={cause.raisedAmount}
+                      />
                       <p className="text-xs text-muted-foreground mt-1">
                         {Math.round(progressPercentage)}% completed
                       </p>

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { EnhancedProgress } from '@/components/ui/enhanced-progress';
 import { Heart, Target, CheckCircle } from 'lucide-react';
 import rescuedCowImage from '@/assets/rescued-cow.jpg';
 
@@ -58,7 +58,13 @@ const DonationDetail = () => {
                   <span className="font-medium">₹2,45,000 raised</span>
                   <span className="text-muted-foreground">Goal: ₹5,00,000</span>
                 </div>
-                <Progress value={49} className="h-3 mb-2" />
+                <EnhancedProgress 
+                  value={49} 
+                  variant="animated"
+                  size="lg"
+                  goalAmount={500000}
+                  raisedAmount={245000}
+                />
                 <p className="text-sm text-muted-foreground">49% completed • 89 donors</p>
               </div>
 

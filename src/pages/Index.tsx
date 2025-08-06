@@ -8,11 +8,23 @@ import EmergencySection from '@/components/home/EmergencySection';
 import CSRSection from '@/components/home/CSRSection';
 import UpcomingEvents from '@/components/home/UpcomingEvents';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
+import DonationForm from '@/components/home/DonationForm';
 
 const Index = () => {
   return (
     <Layout>
-      <HeroSlider />
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div className="lg:col-span-2">
+              <HeroSlider />
+            </div>
+            <div className="lg:col-span-1">
+              <DonationForm />
+            </div>
+          </div>
+        </div>
+      </section>
       <StatsSection />
       <MissionSection />
       <DonationCards />
