@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import rescuedCowImage from '@/assets/rescued-cow.jpg';
 import gaushalaImage from '@/assets/gaushala.jpg';
 import volunteerImage from '@/assets/caring-volunteer.jpg';
+import blogHeaderImage from '@/assets/blog-header.jpg';
 
 // Mock blog data - in real app this would come from API
 const blogPosts = {
@@ -216,7 +217,7 @@ const BlogDetail = () => {
       <PageBanner
         title={blog.title}
         subtitle={`${blog.category} • ${blog.readTime} • ${formatDate(blog.date)}`}
-        backgroundImage={blog.image}
+        backgroundImage={blogHeaderImage}
       />
 
       <article className="py-16 bg-background">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
+import PageBanner from '@/components/layout/PageBanner';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { EnhancedProgress } from '@/components/ui/enhanced-progress';
@@ -21,6 +22,12 @@ const DonationDetail = () => {
 
   return (
     <Layout>
+      <PageBanner
+        title="Emergency Cow Rescue"
+        subtitle="Fund immediate rescue operations for cows in distress across Delhi NCR"
+        backgroundImage={rescuedCowImage}
+      />
+
       <div className="bg-gradient-earth py-8">
         <div className="container mx-auto px-4">
           <Breadcrumb items={breadcrumbItems} />

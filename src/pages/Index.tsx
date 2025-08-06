@@ -4,6 +4,7 @@ import HeroSlider from '@/components/home/HeroSlider';
 import StatsSection from '@/components/home/StatsSection';
 import MissionSection from '@/components/home/MissionSection';
 import DonationCards from '@/components/home/DonationCards';
+import CurrentCampaign from '@/components/home/CurrentCampaign';
 import EmergencySection from '@/components/home/EmergencySection';
 import CSRSection from '@/components/home/CSRSection';
 import UpcomingEvents from '@/components/home/UpcomingEvents';
@@ -28,6 +29,7 @@ const Index = () => {
       <StatsSection />
       <MissionSection />
       <DonationCards />
+      <CurrentCampaign />
       <EmergencySection />
       <CSRSection />
       <UpcomingEvents />
