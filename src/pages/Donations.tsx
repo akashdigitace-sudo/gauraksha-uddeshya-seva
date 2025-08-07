@@ -5,6 +5,8 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Heart, Truck, Home, Wheat, Target, ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { EnhancedProgress } from '@/components/ui/enhanced-progress';
+import DonationProcess from '@/components/donations/DonationProcess';
+import DonorTestimonials from '@/components/donations/DonorTestimonials';
 import cowAmbulanceImage from '@/assets/cow-ambulance.jpg';
 import gaushalaImage from '@/assets/gaushala.jpg';
 import rescuedCowImage from '@/assets/rescued-cow.jpg';
@@ -384,6 +386,9 @@ const Donations = () => {
           </div>
         </div>
       </section>
+
+      <DonationProcess />
+      <DonorTestimonials />
     </Layout>
   );
 };

@@ -10,6 +10,9 @@ import CSRSection from '@/components/home/CSRSection';
 import UpcomingEvents from '@/components/home/UpcomingEvents';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import DonationForm from '@/components/home/DonationForm';
+import VolunteerSection from '@/components/home/VolunteerSection';
+import ImpactStories from '@/components/home/ImpactStories';
+import NewsletterSection from '@/components/home/NewsletterSection';
 
 const Index = () => {
   return (
@@ -30,10 +33,13 @@ const Index = () => {
       <MissionSection />
       <DonationCards />
       <CurrentCampaign />
+      <ImpactStories />
       <EmergencySection />
       <CSRSection />
+      <VolunteerSection />
       <UpcomingEvents />
       <TestimonialsSection />
+      <NewsletterSection />
     </Layout>
   );
 };
