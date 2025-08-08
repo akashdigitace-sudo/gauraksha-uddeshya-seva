@@ -5,6 +5,8 @@ import PageBanner from '@/components/layout/PageBanner';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { EnhancedProgress } from '@/components/ui/enhanced-progress';
+import DonationImpact from '@/components/donation-detail/DonationImpact';
+import CampaignUpdates from '@/components/donation-detail/CampaignUpdates';
 import { Heart, Target, CheckCircle } from 'lucide-react';
 import rescuedCowImage from '@/assets/rescued-cow.jpg';
 
@@ -98,6 +100,9 @@ const DonationDetail = () => {
           </div>
         </div>
       </section>
+
+      <DonationImpact />
+      <CampaignUpdates />
     </Layout>
   );
 };

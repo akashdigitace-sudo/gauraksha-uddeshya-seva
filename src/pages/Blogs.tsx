@@ -183,11 +183,11 @@ const Blogs = () => {
     const fetchBlogs = async () => {
       try{
         const response = await axios.get('https://api.cybals.com/api/blogs');
-        console.log(response.data);
+        // console.log(response.data);
         setBlogs(response.data);
         setLoading(false);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         setLoading(true);
         setError(error.message);
       }

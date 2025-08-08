@@ -98,10 +98,10 @@ const BlogDetail = () => {
         setLoading(true);
         setError(null);
         const response = await axios.get(`https://api.cybals.com/api/blogs/${blogId}`);
-        console.log(response.data);
+
         setBlog(response.data);
       } catch (err) {
-        console.log(err.message);
+
         setError(err.message || 'Failed to fetch blog');
       } finally {
         setLoading(false);
