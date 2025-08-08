@@ -58,7 +58,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-[80vh] min-h-[600px] overflow-hidden">
+    <div className="relative h-[100vh] mt-12 min-h-[600px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -79,7 +79,7 @@ const HeroSlider = () => {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
+          <div className="relative z-10 container mx-auto px-12 md:px-20  h-full flex items-center">
             <div className="max-w-3xl text-white animate-fade-in">
               <div className="flex items-center space-x-2 mb-4">
                 <Heart className="h-6 w-6 fill-current text-white animate-pulse" />
@@ -115,44 +115,44 @@ const HeroSlider = () => {
             </div>
 
             {/* Impact Stats Card */}
-            <div className="hidden lg:block absolute right-8 top-1/2 transform -translate-y-1/2">
-              <div className="bg-white/95 backdrop-blur rounded-2xl p-6 shadow-2xl max-w-sm animate-scale-in">
-                <div className="text-center mb-4">
-                  <Shield className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h3 className="text-xl font-bold text-foreground mb-2">Today's Impact</h3>
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-primary/10 rounded-lg">
-                    <span className="text-sm font-medium text-foreground">Cows Rescued</span>
-                    <span className="text-lg font-bold text-primary">1,284</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-success/10 rounded-lg">
-                    <span className="text-sm font-medium text-foreground">Funds Raised</span>
-                    <span className="text-lg font-bold text-success">₹45.6L</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-warning/10 rounded-lg">
-                    <span className="text-sm font-medium text-foreground">Active Donors</span>
-                    <span className="text-lg font-bold text-warning">572</span>
-                  </div>
-                </div>
-                
-                <div className="mt-4 p-3 bg-gradient-primary/10 rounded-lg text-center">
-                  <div className="text-xs text-muted-foreground mb-1">Emergency Fund</div>
-                  <div className="text-sm font-bold text-primary">49% complete</div>
-                  <div className="w-full bg-background rounded-full h-2 mt-2">
-                    <div className="bg-gradient-primary h-2 rounded-full" style={{ width: '49%' }}></div>
-                  </div>
-                </div>
-                
-                <Link to="/donations" className="block mt-4">
-                  <Button variant="donate" className="w-full">
-                    View All Causes
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            {/*<div className="hidden lg:block absolute right-8 top-1/2 transform -translate-y-1/2">*/}
+            {/*  <div className="bg-white/95 backdrop-blur rounded-2xl p-6 shadow-2xl max-w-sm animate-scale-in">*/}
+            {/*    <div className="text-center mb-4">*/}
+            {/*      <Shield className="h-10 w-10 text-primary mx-auto mb-3" />*/}
+            {/*      <h3 className="text-xl font-bold text-foreground mb-2">Today's Impact</h3>*/}
+            {/*    </div>*/}
+            {/*    */}
+            {/*    <div className="space-y-3">*/}
+            {/*      <div className="flex justify-between items-center p-3 bg-primary/10 rounded-lg">*/}
+            {/*        <span className="text-sm font-medium text-foreground">Cows Rescued</span>*/}
+            {/*        <span className="text-lg font-bold text-primary">1,284</span>*/}
+            {/*      </div>*/}
+            {/*      <div className="flex justify-between items-center p-3 bg-success/10 rounded-lg">*/}
+            {/*        <span className="text-sm font-medium text-foreground">Funds Raised</span>*/}
+            {/*        <span className="text-lg font-bold text-success">₹45.6L</span>*/}
+            {/*      </div>*/}
+            {/*      <div className="flex justify-between items-center p-3 bg-warning/10 rounded-lg">*/}
+            {/*        <span className="text-sm font-medium text-foreground">Active Donors</span>*/}
+            {/*        <span className="text-lg font-bold text-warning">572</span>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*    */}
+            {/*    <div className="mt-4 p-3 bg-gradient-primary/10 rounded-lg text-center">*/}
+            {/*      <div className="text-xs text-muted-foreground mb-1">Emergency Fund</div>*/}
+            {/*      <div className="text-sm font-bold text-primary">49% complete</div>*/}
+            {/*      <div className="w-full bg-background rounded-full h-2 mt-2">*/}
+            {/*        <div className="bg-gradient-primary h-2 rounded-full" style={{ width: '49%' }}></div>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*    */}
+            {/*    <Link to="/donations" className="block mt-4">*/}
+            {/*      <Button variant="donate" className="w-full">*/}
+            {/*        View All Causes*/}
+            {/*        <ArrowRight className="h-4 w-4 ml-2" />*/}
+            {/*      </Button>*/}
+            {/*    </Link>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       ))}
@@ -160,14 +160,14 @@ const HeroSlider = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur text-white hover:bg-white/30 transition-all"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full  bg-white/10 md:bg-white/20 backdrop-blur text-white hover:bg-white/30 transition-all"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur text-white hover:bg-white/30 transition-all"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full  bg-white/10 md:bg-white/20 backdrop-blur text-white hover:bg-white/30 transition-all"
       >
         <ChevronRight className="h-6 w-6" />
       </button>

@@ -39,10 +39,7 @@ const MissionSection = () => {
                 Our Sacred Mission
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                We are dedicated to the protection, rescue, and relocation of cows across India. 
-                Our mission stems from the belief that every life is sacred and deserves protection. 
-                Through community support and compassionate action, we create safe sanctuaries 
-                where these gentle beings can thrive.
+                We are a dedicated non-profit organization working tirelessly to protect, nurture, and uphold the dignity of our revered Mother Cows. At Care 4 Cow, we cherish the deep-rooted cultural and spiritual connection between cows and humanity, recognizing them as not just providers of nourishment but also as living symbols of grace, patience, and compassion.
               </p>
             </div>
 
